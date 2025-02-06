@@ -47,7 +47,7 @@ public class ScoreManager : MonoBehaviour
 
     private void RegisterScore() // occurs when player dies
     {
-        latestScore = new ScoreData("RAF", totalScore);
+        latestScore = new ScoreData("P1", totalScore);
         //created an object filled with information
 
         string latestScoreInJson = JsonUtility.ToJson(latestScore);
@@ -56,7 +56,7 @@ public class ScoreManager : MonoBehaviour
         PlayerPrefs.SetString("LatestScore", latestScoreInJson);
         //saved that string into PlayerPrefs
 
-        ScoreData newScore = new ScoreData("RAF", totalScore);
+        ScoreData newScore = new ScoreData("P1", totalScore);
         allScores.Add(newScore);
 
         string allScoresInText = "";

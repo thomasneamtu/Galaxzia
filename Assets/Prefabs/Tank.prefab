@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7519146658788439904}
   - component: {fileID: 3717563430469750594}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: engine5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_LinearDrag
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 844751154830467935, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1026960300090237178, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -115,6 +119,10 @@ PrefabInstance:
     - target: {fileID: 1932847323706513797, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_Name
       value: Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932847323706513797, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1932847323706513797, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_TagString
@@ -178,7 +186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2972844977586108070, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.94
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 3285846197061889492, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -352,6 +360,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.27
       objectReference: {fileID: 0}
+    - target: {fileID: 5444089791746062485, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245276412085689861, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7412330023096115702, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_Color.b
       value: 0.4666667
@@ -396,6 +412,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.169
       objectReference: {fileID: 0}
+    - target: {fileID: 9170102924890723112, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 389810949546772007, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
     - {fileID: 2729459765731501502, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
@@ -436,12 +456,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37bbfcd3c0366b4e9c77ca262203cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 11400000, guid: a1a51995aa59c204bbbb0e731c3eeedf, type: 2}
+  currentWeapon: {fileID: 11400000, guid: 7743a0b1049345148a938f67649aa0f0, type: 2}
   myRigidbody: {fileID: 1239796900452405149}
   movementSpeed: 2
   health: 45
   dieEffect: {fileID: 725748389856807714, guid: 4bda94453d2ca7444a0fff05b2d425f5, type: 3}
-  distanceToStop: 7
+  distanceToStop: 10
   attackCoolDown: 1
   enemyWeaponTip: {fileID: 3583254493445445907}
 --- !u!50 &1239796900452405149 stripped
@@ -491,9 +511,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00019740278, y: 0.03397946}
+  m_Offset: {x: -0.00054471317, y: 0.09369078}
   serializedVersion: 2
-  m_Radius: 0.42102018
+  m_Radius: 0.3613079
 --- !u!4 &8775171772940045731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7006545521671266838, guid: 1750781463cd68c4da389955f3b333dc, type: 3}

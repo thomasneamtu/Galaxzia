@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5609862746554724676}
   - component: {fileID: 7371740063021619900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: gun08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_LinearDrag
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 844751154830467935, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1026960300090237178, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.97
@@ -111,6 +115,10 @@ PrefabInstance:
     - target: {fileID: 1932847323706513797, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1932847323706513797, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1932847323706513797, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_TagString
@@ -212,6 +220,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.433
       objectReference: {fileID: 0}
+    - target: {fileID: 5444089791746062485, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245276412085689861, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7412330023096115702, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_Color.b
       value: 0.4666667
@@ -247,6 +263,10 @@ PrefabInstance:
     - target: {fileID: 8904500570322965159, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.169
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170102924890723112, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 389810949546772007, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
@@ -291,6 +311,11 @@ MonoBehaviour:
   distanceToStop: 10
   attackCoolDown: 1
   enemyWeaponTip: {fileID: 3583254493445445907}
+  PowerUpDrops:
+  - {fileID: 7536885893092023801, guid: 8d8d3c18871b6464dbb8d55e80e8f213, type: 3}
+  - {fileID: 4432031093573338379, guid: 4e86a60baf6120d48bfe3827a917215f, type: 3}
+  - {fileID: 4400958193459968260, guid: 5783eb2f05a310b49848d44c6140c527, type: 3}
+  PowerUpDropChance: 0.25
 --- !u!50 &1239796900452405149 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 706863440671088680, guid: 1750781463cd68c4da389955f3b333dc, type: 3}

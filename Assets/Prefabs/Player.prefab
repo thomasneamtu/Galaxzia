@@ -329,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 7245276412085689861}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.842, z: 0}
+  m_LocalPosition: {x: 0, y: 1.053, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -343,6 +343,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 863813025944041962, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2399833159097426793, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.088
@@ -375,6 +379,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.246
       objectReference: {fileID: 0}
+    - target: {fileID: 4554101892376203863, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5634519351004225925, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
       value: 0.010247123
@@ -386,6 +394,10 @@ PrefabInstance:
     - target: {fileID: 6531189138605086970, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531189138605086970, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6531189138605086970, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
       propertyPath: m_TagString
@@ -475,7 +487,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.238
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5634519351004225925, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2725785956109584518, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
     - {fileID: 576047209200618254, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
@@ -504,9 +517,6 @@ PrefabInstance:
       addedObject: {fileID: 706863440671088680}
     - targetCorrespondingSourceObject: {fileID: 4554101892376203863, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9169997113666440649}
-    - targetCorrespondingSourceObject: {fileID: 4554101892376203863, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3285846197061889492}
   m_SourcePrefab: {fileID: 100100000, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
 --- !u!1 &1932847323706513797 stripped
@@ -526,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad0562645876a64ba58b36e6d09e13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 11400000, guid: bd9f46d65356cb547a937bf76dcf11a9, type: 2}
+  currentWeapon: {fileID: 11400000, guid: 892db5a0aa1b8e5489f05fbb26505e2e, type: 2}
   myRigidbody: {fileID: 706863440671088680}
   movementSpeed: 20
   health: 100
@@ -585,24 +595,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4554101892376203863, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
   m_PrefabInstance: {fileID: 4643681310758748543}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9169997113666440649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9170102924890723112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ad0562645876a64ba58b36e6d09e13a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 0}
-  myRigidbody: {fileID: 0}
-  movementSpeed: 20
-  health: 100
-  dieEffect: {fileID: 0}
-  playerWeaponTip: {fileID: 2972844977586108070}
 --- !u!60 &3285846197061889492
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -647,7 +639,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.0049193837, y: 0.35123485}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
+    - - {x: 0.010241045, y: 0.10739157}
+      - {x: -0.48273993, y: -0.11511466}
+      - {x: 0.011095915, y: -0.38388172}
+      - {x: 0.48705477, y: -0.10384509}
   m_UseDelaunayMesh: 0

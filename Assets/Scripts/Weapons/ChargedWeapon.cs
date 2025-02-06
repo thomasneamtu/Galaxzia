@@ -11,18 +11,15 @@ public class ChargeWeapon : ProjectileWeapon
     private float chargingTimer;
 
 
-    public override void Reload()
-    {
-        
-    }
-
     public override void Shoot(Transform weaponTip)
     {
         if (isShooting)
         {
 
-            if (chargingTimer > chargingRequiredTime)
+            if (chargingTimer >= chargingRequiredTime)
             {
+                //stop charging sound
+                //play shot sound
                 Bullet bulletClone = GameObject.Instantiate(projectilePrefab, weaponTip.position, weaponTip.rotation);
                 bulletClone.InitializeBullet(damage);
                 StopShooting();
@@ -36,9 +33,10 @@ public class ChargeWeapon : ProjectileWeapon
 
     public override void StartShooting(Transform weaponTip)
     {
+        //audio source for charging sound
         isShooting = true;
         chargingTimer = 0;
-    }
+    }   
 
     public override void StopShooting()
     {

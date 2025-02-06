@@ -4,10 +4,7 @@ using UnityEngine;
 
 public abstract class PickUp : MonoBehaviour
 {
-
-    [SerializeField] private Weapon pickUp;
    
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.attachedRigidbody.CompareTag("Player"))

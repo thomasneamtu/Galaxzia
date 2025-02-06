@@ -10,6 +10,9 @@ public class Enemy : Character
     private Player target;
 
 
+    [SerializeField] private GameObject[] PowerUpDrops;
+    public float PowerUpDropChance = 0.5f;
+
     protected override void Start()
     {
         base.Start();
@@ -55,6 +58,16 @@ public class Enemy : Character
     {
         GameManager.instance.RemoveEnemyFromList(this);
         base.PlayDeadEffect();
+        DropPowerUp();
+    }
+
+    private void DropPowerUp()
+    {
+        if (Random.value < PowerUpDropChance)
+        {
+            int randomIndex = Random.Range(0, PowerUpDrops.Length);
+            Instantiate(PowerUpDrops[randomIndex], transform.position, Quaternion.identity);
+        }
     }
 }    
 

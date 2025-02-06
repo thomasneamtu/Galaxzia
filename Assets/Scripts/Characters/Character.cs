@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
     [SerializeField] private Rigidbody2D myRigidbody;
     [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private float health = 10f;
-    [SerializeField] private GameObject dieEffect;
+    [SerializeField] public GameObject dieEffect;
 
     protected virtual void Start()
     {
