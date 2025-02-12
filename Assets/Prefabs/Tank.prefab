@@ -427,6 +427,7 @@ PrefabInstance:
     - {fileID: 5156388953609685617, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
     - {fileID: 4693793945246239288, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
     - {fileID: 3821215226667631294, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
+    - {fileID: 7739332756025632479, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7006545521671266838, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       insertIndex: -1
@@ -464,6 +465,8 @@ MonoBehaviour:
   distanceToStop: 10
   attackCoolDown: 1
   enemyWeaponTip: {fileID: 3583254493445445907}
+  PowerUpDrops: []
+  PowerUpDropChance: 0.5
 --- !u!50 &1239796900452405149 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 706863440671088680, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
