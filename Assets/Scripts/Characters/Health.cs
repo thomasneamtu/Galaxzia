@@ -13,12 +13,10 @@ public class Health
         healthValue -= damageParameter;
         Debug.Log("Health Decreasing" + healthValue);
         OnHealthChanged.Invoke(healthValue);
-        //update UI
-        //check if is dead
+       
         if(IsDead())
         {
             OnDied.Invoke();
-           
         }
     }
 

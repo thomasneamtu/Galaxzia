@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,21 +6,26 @@ using UnityEngine;
 
 public class Turret : Character
 {
+    private float timeAlive;
+    private float timeUntilDestruction = 5f;
     [SerializeField] GameObject turretPrefab;
     [SerializeField] private Transform turretWeaponTip;
 
     public void Update()
     {
-        isTurretEnabled();
+        
     }
 
-    private void isTurretEnabled()
+    private void TurretTimer()
     {
-        if (turretPrefab != null)
+        if (timeAlive > timeUntilDestruction)
         {
-            Invoke("PlayDeadEffect", 10f);
+            PlayDeadEffect();
         }
-
+        else
+        {
+            timeAlive += Time.deltaTime;
+        }
     }
 
     public override void PlayDeadEffect()

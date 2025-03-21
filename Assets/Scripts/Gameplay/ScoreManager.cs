@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Drawing;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -42,6 +41,7 @@ public class ScoreManager : MonoBehaviour
                 totalScore -= scorePerPickUp;
                 break;
         }
+
         OnScoreChanged.Invoke(totalScore);   
     }
 

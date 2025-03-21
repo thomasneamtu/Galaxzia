@@ -2,16 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using Cinemachine;
+using Unity.VisualScripting;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [SerializeField] private Player player;
     [SerializeField] private Enemy bomberPrefab;
     [SerializeField] private Enemy tankPrefab;
     [SerializeField] private Enemy enemyPrefab;
     [SerializeField] private Transform[] spawnPointsArray;
     [SerializeField] private List<Enemy> listOfAllEnemiesAlive;
+
+    [SerializeField] private Animator deathCameraAnimation;
+    [SerializeField] private float camSpeed;
+    [SerializeField] private GameObject virtualCam;
+    [SerializeField] private Vector3 targetCamPosition;
 
     private ScoreManager scoreManager;
 
@@ -19,31 +26,48 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnGameOver;
     
     void Start()
-    {
-        //OnGameOver += 
+    { 
+        OnGameStart.Invoke();
+
         if (instance == null)
             instance = this;
-        else
-            Destroy(gameObject);
-
-
-        scoreManager = GetComponent<ScoreManager>();
+            else
+                Destroy(gameObject);
 
         FindObjectOfType<Player>().healthValue.OnDied.AddListener(GameOver);
 
-        StartCoroutine(SpawnWaveOfEnemies());
-        SpawnEnemy();
-        SpawnBomber();
-        StartCoroutine(SpawnWaveofTanks()); 
-    }
-    private void GameOver()
-    {
-        OnGameOver.Invoke();
-        StopAllCoroutines();
+        scoreManager = GetComponent<ScoreManager>();
+
+        Debug.Log("GameManager is Here!");
     }
     public void Update()
     {
         
+    }
+
+    public void GameOver()
+    {   
+        StopAllCoroutines();
+        OnGameOver.Invoke();
+        deathCameraAnimation.SetBool("isDead", true);
+        DeathCameraMovement();
+
+        Debug.Log("Game is Over!");
+    }
+    
+    public void GameStart()
+    {
+        StartCoroutine(SpawnWaveOfEnemies());
+        StartCoroutine(SpawnWaveofTanks());
+
+        deathCameraAnimation.SetBool("isDead", false);
+
+        Debug.Log("The Game Begins!");
+    }
+
+    private void DeathCameraMovement()
+    {
+       virtualCam.transform.position = Vector3.Lerp(transform.position, targetCamPosition, Time.deltaTime * camSpeed);
     }
 
     private Enemy SpawnEnemy()
@@ -99,7 +123,7 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            if (listOfAllEnemiesAlive.Count < 50) //enemies are less than 20
+            if (listOfAllEnemiesAlive.Count < 50) //enemies are less than 50
             {
                 Enemy clone = SpawnEnemy();
                 Enemy bomber = SpawnBomber();

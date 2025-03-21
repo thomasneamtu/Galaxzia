@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class PickUp : MonoBehaviour
 {
-   
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.attachedRigidbody.CompareTag("Player"))

@@ -1,4 +1,4 @@
-using UnityEditor.Rendering;
+
 using UnityEngine;
 
 public class Enemy : Character
@@ -18,8 +18,6 @@ public class Enemy : Character
         base.Start();
         target = FindObjectOfType<Player>();
     }
-    
-        
     
     protected void Update()
     {

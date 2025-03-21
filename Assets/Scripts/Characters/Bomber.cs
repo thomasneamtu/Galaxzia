@@ -4,7 +4,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bomber : Enemy
-    
 {
     private float myDamage;
 
