@@ -9,13 +9,12 @@ public class Bomber : Enemy
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.rigidbody.CompareTag("Player"))
+        if (collision.rigidbody && collision.rigidbody.CompareTag("Player"))
         {
             collision.rigidbody.GetComponent<Character>().healthValue.DecreaseHealth(25f);
-            Debug.Log("BOOM");
+            PlayDeadEffect();
         }
-
-        Destroy(gameObject);
-        PlayDeadEffect();
+       
     }
+
 }

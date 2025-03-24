@@ -6,26 +6,27 @@ using UnityEngine;
 
 public class Turret : Character
 {
-    private float timeAlive;
-    private float timeUntilDestruction = 5f;
+    [SerializeField] private float timeAlive;
+    [SerializeField] private float timeUntilDestruction = 5f;
     [SerializeField] GameObject turretPrefab;
     [SerializeField] private Transform turretWeaponTip;
 
     public void Update()
     {
-        
+        TurretTimer();
     }
 
     private void TurretTimer()
     {
-        if (timeAlive > timeUntilDestruction)
+        timeAlive += Time.deltaTime;
+
+        if (timeAlive >= timeUntilDestruction)
         {
             PlayDeadEffect();
+            Debug.Log("Turret Expired");
+            timeAlive = 0;
         }
-        else
-        {
-            timeAlive += Time.deltaTime;
-        }
+        
     }
 
     public override void PlayDeadEffect()

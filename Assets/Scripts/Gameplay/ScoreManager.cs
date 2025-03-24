@@ -18,10 +18,13 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private List<ScoreData> allScores = new List<ScoreData>();
 
     [SerializeField] private ScoreData latestScore;
+   
     private void Start()
     {
-        Player playerObject = FindObjectOfType<Player>();
-        playerObject.healthValue.OnDied.AddListener(RegisterScore);
+
+         Player playerObject = FindObjectOfType<Player>();
+         playerObject.healthValue.OnDied.AddListener(RegisterScore);
+
 
         highestScore = PlayerPrefs.GetInt("HighScore");
 

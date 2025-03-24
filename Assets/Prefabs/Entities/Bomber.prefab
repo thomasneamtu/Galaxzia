@@ -16,29 +16,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1026960300090237178, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026960300090237178, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026960300090237178, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684650417365917966, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1932847323706513797, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_Name
       value: Bomber
       objectReference: {fileID: 0}
     - target: {fileID: 1932847323706513797, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1932847323706513797, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_TagString
@@ -220,14 +204,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.8396226
       objectReference: {fileID: 0}
-    - target: {fileID: 4532628256589066479, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.317
-      objectReference: {fileID: 0}
-    - target: {fileID: 4532628256589066479, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.433
-      objectReference: {fileID: 0}
     - target: {fileID: 5444089791746062485, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -268,10 +244,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 179.667
       objectReference: {fileID: 0}
-    - target: {fileID: 8904500570322965159, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.169
-      objectReference: {fileID: 0}
     - target: {fileID: 9170102924890723112, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -279,11 +251,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 389810949546772007, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
     - {fileID: 2729459765731501502, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
-    - {fileID: 9169997113666440649, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
-    - {fileID: 1026960300090237178, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
     m_RemovedGameObjects:
-    - {fileID: 7323491183803255289, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
-    - {fileID: 5156388953609685617, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
     - {fileID: 4693793945246239288, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
     - {fileID: 3821215226667631294, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
     - {fileID: 7739332756025632479, guid: 1750781463cd68c4da389955f3b333dc, type: 3}

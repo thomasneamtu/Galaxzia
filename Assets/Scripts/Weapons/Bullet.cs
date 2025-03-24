@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bullet : MonoBehaviour
 {
@@ -29,13 +30,9 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.rigidbody)
+        if (collision.rigidbody && collision.rigidbody.GetComponent<Character>())
         {
             collision.rigidbody.GetComponent<Character>().healthValue.DecreaseHealth(myDamage);
-        }
-        else
-        {
-            Destroy(gameObject);
         }
 
         Destroy(gameObject);

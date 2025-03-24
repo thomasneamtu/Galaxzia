@@ -641,7 +641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7387283694324631629, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.2
+      value: 2.6726983
       objectReference: {fileID: 0}
     - target: {fileID: 7387283694324631629, guid: 3de7af4a78abab34694c8e6d81e4332c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -776,8 +776,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 11400000, guid: 892db5a0aa1b8e5489f05fbb26505e2e, type: 2}
-  audioSource: {fileID: 0}
-  deathSound: {fileID: 8300000, guid: 6a49c2ed8ddec0d4883444f545a6fce1, type: 3}
   myRigidbody: {fileID: 706863440671088680}
   movementSpeed: 20
   health: 100

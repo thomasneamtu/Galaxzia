@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Cinemachine;
-using Unity.VisualScripting;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -24,45 +23,40 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent OnGameStart;
     public UnityEvent OnGameOver;
-    
+
     void Start()
-    { 
-        OnGameStart.Invoke();
-
+    {
         if (instance == null)
+        {
             instance = this;
-            else
-                Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 
-        FindObjectOfType<Player>().healthValue.OnDied.AddListener(GameOver);
+        listOfAllEnemiesAlive = new List<Enemy>();
 
         scoreManager = GetComponent<ScoreManager>();
+        
+        FindObjectOfType<Player>().healthValue.OnDied.AddListener(GameOver);
 
+        SpawnEnemy();
+        StartCoroutine(SpawnWaveOfEnemies());
+        StartCoroutine(SpawnWaveofTanks());
+        deathCameraAnimation.SetBool("isDead", false);
+        Debug.Log("The Game Begins!");
         Debug.Log("GameManager is Here!");
     }
-    public void Update()
-    {
-        
-    }
-
-    public void GameOver()
-    {   
-        StopAllCoroutines();
+   
+    private void GameOver()
+    {  
         OnGameOver.Invoke();
+        StopAllCoroutines();
         deathCameraAnimation.SetBool("isDead", true);
         DeathCameraMovement();
 
         Debug.Log("Game is Over!");
-    }
-    
-    public void GameStart()
-    {
-        StartCoroutine(SpawnWaveOfEnemies());
-        StartCoroutine(SpawnWaveofTanks());
-
-        deathCameraAnimation.SetBool("isDead", false);
-
-        Debug.Log("The Game Begins!");
     }
 
     private void DeathCameraMovement()

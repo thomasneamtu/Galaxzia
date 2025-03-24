@@ -1,4 +1,4 @@
-
+using UnityEngine.Events;
 using UnityEngine;
 
 public class Enemy : Character
@@ -8,7 +8,6 @@ public class Enemy : Character
     [SerializeField] private Transform enemyWeaponTip;
     private float attackTimer;
     private Player target;
-
 
     [SerializeField] private GameObject[] PowerUpDrops;
     public float PowerUpDropChance = 0.5f;
@@ -61,7 +60,7 @@ public class Enemy : Character
 
     private void DropPowerUp()
     {
-        if (Random.value < PowerUpDropChance)
+        if (PowerUpDropChance > 0 && Random.value < PowerUpDropChance)
         {
             int randomIndex = Random.Range(0, PowerUpDrops.Length);
             Instantiate(PowerUpDrops[randomIndex], transform.position, Quaternion.identity);

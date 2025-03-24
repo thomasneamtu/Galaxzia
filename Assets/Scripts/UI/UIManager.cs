@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,12 +12,12 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+
         FindObjectOfType<ScoreManager>().OnScoreChanged.AddListener(UpdateScoreValue);
 
         Player playerObject = FindObjectOfType<Player>();
 
         playerObject.healthValue.OnHealthChanged.AddListener(UpdateHealthValue);
-
         UpdateHealthValue(playerObject.healthValue.GetHealthValue());
     }
     public void UpdateScoreValue(int score)
