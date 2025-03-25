@@ -12,7 +12,7 @@ public class Character : MonoBehaviour
     [SerializeField] private float health = 10f;
     [SerializeField] public GameObject dieEffect;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         healthValue = new Health(health);
         healthValue.OnDied.AddListener(PlayDeadEffect);

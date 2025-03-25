@@ -637,6 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 531576595}
   - component: {fileID: 531576594}
+  - component: {fileID: 531576596}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -727,6 +728,29 @@ Transform:
   - {fileID: 603379574}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &531576596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531576593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11689f275339bd8418b818f432a0b760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnScoreChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  totalScore: 0
+  highestScore: 0
+  scorePerEnemy: 500
+  scorePerPickUp: 1000
+  allScores: []
+  latestScore:
+    userName: P1
+    highestScore: 0
 --- !u!1 &544164601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8860983614242003923, guid: d7482a647603208418d330ff5e86064a, type: 3}
@@ -991,61 +1015,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2861333349661761381, guid: aedddbc408ed2ab419c6a03af6816992, type: 3}
   m_PrefabInstance: {fileID: 797112048}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &810362725
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 810362727}
-  - component: {fileID: 810362726}
-  m_Layer: 0
-  m_Name: ScoreManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &810362726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810362725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11689f275339bd8418b818f432a0b760, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnScoreChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  totalScore: 0
-  highestScore: 0
-  scorePerEnemy: 250
-  scorePerPickUp: 1000
-  allScores: []
-  latestScore:
-    userName: P1
-    highestScore: 0
---- !u!4 &810362727
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810362725}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.262656, y: 3.79997, z: -22.957054}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &898181235 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4562981493557941758, guid: d7482a647603208418d330ff5e86064a, type: 3}
@@ -2665,7 +2634,6 @@ SceneRoots:
   - {fileID: 2019229742}
   - {fileID: 619394802}
   - {fileID: 531576595}
-  - {fileID: 810362727}
   - {fileID: 1873539149}
   - {fileID: 1965364096}
   - {fileID: 942241848}

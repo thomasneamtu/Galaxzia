@@ -12,9 +12,9 @@ public class Enemy : Character
     [SerializeField] private GameObject[] PowerUpDrops;
     public float PowerUpDropChance = 0.5f;
 
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
+        base.Awake();
         target = FindObjectOfType<Player>();
     }
     

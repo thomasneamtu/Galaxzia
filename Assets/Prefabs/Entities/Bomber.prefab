@@ -293,7 +293,7 @@ MonoBehaviour:
   - {fileID: 4400958193459968260, guid: 5783eb2f05a310b49848d44c6140c527, type: 3}
   - {fileID: 4432031093573338379, guid: 4e86a60baf6120d48bfe3827a917215f, type: 3}
   - {fileID: 7536885893092023801, guid: 8d8d3c18871b6464dbb8d55e80e8f213, type: 3}
-  PowerUpDropChance: 0.15
+  PowerUpDropChance: 0.1
 --- !u!50 &1239796900452405149 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 706863440671088680, guid: 1750781463cd68c4da389955f3b333dc, type: 3}
