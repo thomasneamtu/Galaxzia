@@ -14,3 +14,6 @@ A 2D Retro Survival Space Shooter.
 A project created while doing my Game Dev course with Circuit Stream.
 
 
+(gif has some sort of red tint on it game looks better when you play it i promise!)
+
+![Image](https://github.com/user-attachments/assets/5b87b263-40e3-4511-8d15-6ed829726c20)
